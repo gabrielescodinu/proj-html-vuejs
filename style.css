@@ -1,6 +1,9 @@
 * {
   font-family: "Lato";
 }
+a {
+  text-decoration: none;
+}
 body {
   margin: 0;
   padding: 0;
@@ -9,8 +12,10 @@ body {
 header {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("img/hero-07-2x.jpg");
   background-size: cover;
-  height: 300px;
+  height: 600px;
 }
+
+/* navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -30,4 +35,67 @@ header {
 .link a:hover {
   color: #f3b329;
   border-top: 7px solid #f3b329;
+}
+
+/* banner intro */
+.banner {
+  width: 85%;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+}
+.intro h1 {
+  color: #f3b329;
+  font-size: 50px;
+}
+.intro h2 {
+  color: white;
+  font-size: 40px;
+  width: 600px;
+}
+.intro h3 {
+  color: lightgrey;
+  font-style: oblique;
+}
+.intro i {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.intro i:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* banner book-release */
+.book-release {
+  margin-right: 20px;
+}
+.demos-sale {
+  background-color: white;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+.demos-sale:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.demos-sale i {
+  font-size: 40px;
+  color: #1d1c1a;
+}
+.book-release p {
+  font-size: 15px;
+  line-height: 0px;
+}
+.book-release span {
+  font-weight: bold;
+  line-height: 30px;
+  color: rgb(135, 203, 152);
+}
+#price {
+  font-size: 40px;
 }
