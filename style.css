@@ -228,7 +228,6 @@ header {
   text-transform: uppercase;
   font-size: 15px;
 }
-
 .best-author {
   background-image: url("img/testimonial2-2x.jpg");
   background-size: cover;
@@ -315,4 +314,47 @@ header {
 }
 .testimonials-dx-article-credits span {
   padding-left: 10px;
+}
+
+/* upcoming events */
+.upcoming-events-container {
+  background-color: #f3ece3;
+  text-align: center;
+  height: 700px;
+}
+.upcoming-events-container h1 {
+  padding-top: 80px;
+}
+.upcoming-events-container h2 {
+  color: #f3b329;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+.upcoming-events {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+.event {
+  background-color: white;
+  height: 400px;
+  width: 400px;
+}
+.event img {
+  width: 400px;
+}
+.event img:hover {
+  filter: sepia(70%);
+}
+.event hr {
+  width: 80%;
+  margin: auto;
+}
+.event p {
+  color: grey;
+  width: 80%;
+  margin: auto;
+  margin-top: 15px;
 }
