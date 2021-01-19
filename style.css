@@ -11,8 +11,9 @@ body {
 }
 header {
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("img/hero-07-2x.jpg");
+  width: 100%;
   background-size: cover;
-  height: 600px;
+  height: 800px;
 }
 
 /* navbar */
@@ -67,9 +68,13 @@ header {
 .intro i:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* banner book-release */
+
+/* banner icons */
 .book-release {
-  margin-right: 20px;
+  margin-top: 50px;
+}
+.icon {
+  margin-left: 85%;
 }
 .demos-sale {
   background-color: white;
@@ -91,11 +96,48 @@ header {
   font-size: 15px;
   line-height: 0px;
 }
-.book-release span {
+.icon span {
   font-weight: bold;
   line-height: 30px;
   color: rgb(135, 203, 152);
 }
 #price {
   font-size: 40px;
+}
+
+/* banner latest-book */
+.latest-book {
+  padding: 20px;
+  background-color: white;
+  margin-top: 100px;
+  width: 600px;
+}
+.latest-book-container {
+  display: flex;
+}
+.latest-book-info h5 {
+  color: #f3b329;
+}
+.latest-book-info p {
+  color: grey;
+  width: 300px;
+  line-height: 20px;
+}
+.buy {
+  margin: auto;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.buy a {
+  border: 1px solid rgb(135, 203, 152);
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+  width: 200px;
+}
+.buy a:hover {
+  background-color: rgb(135, 203, 152);
+  color: white;
 }
