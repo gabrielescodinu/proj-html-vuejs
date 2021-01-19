@@ -166,3 +166,12 @@ header {
 .about a:hover {
   background-color: grey;
 }
+
+/* brand */
+.brand {
+  background-color: #f3ece3;
+  text-align: center;
+}
+.brand img {
+  padding: 50px;
+}
