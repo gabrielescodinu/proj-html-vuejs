@@ -358,3 +358,43 @@ header {
   margin: auto;
   margin-top: 15px;
 }
+
+/* newsletter */
+.newsletter-container {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("img/banner-2.jpg");
+  background-size: cover;
+  height: 450px;
+}
+.newsletter {
+  text-align: center;
+}
+.newsletter h1 {
+  padding-top: 100px;
+  color: white;
+}
+.newsletter h2 {
+  text-transform: uppercase;
+  color: #f3b329;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+.newsletter input {
+  padding: 15px;
+  width: 250px;
+  border-radius: 5px;
+  outline-style: none;
+}
+.newsletter a {
+  padding: 15px 40px 15px 40px;
+  background-color: rgb(73, 169, 135);
+  border-radius: 5px;
+  margin-left: 20px;
+  color: white;
+}
+.newsletter a:hover {
+  background-color: grey;
+}
+.newsletter p {
+  color: grey;
+  margin-top: 50px;
+}
