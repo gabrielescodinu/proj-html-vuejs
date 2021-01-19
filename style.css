@@ -211,15 +211,18 @@ header {
   padding: 20px;
 }
 
-/* testimonials */
+/* testimonials sx */
 .testimonials {
-  width: 70%;
+  width: 60%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
-.testimonials-banner {
+.testimonials-sx {
   margin-top: 50px;
+  margin-bottom: 100px;
 }
-.testimonials-banner h2 {
+.testimonials-sx h2 {
   color: rgb(73, 169, 135);
   font-weight: normal;
   text-transform: uppercase;
@@ -233,6 +236,10 @@ header {
   width: 600px;
   border-bottom-right-radius: 50px;
 }
+.best-author:hover {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2) ), url("img/testimonial2-2x.jpg");
+  background-size: cover;
+}
 .best-author h1 {
   padding: 50px;
   color: white;
@@ -240,6 +247,7 @@ header {
 }
 .best-author hr {
   width: 80%;
+  color: white;
 }
 .best-author h3 {
   color: white;
@@ -269,5 +277,42 @@ header {
 }
 #journal {
   color: rgb(73, 169, 135);
+  padding-left: 10px;
+}
+
+/* testimonials dx */
+.testimonials-dx {
+  margin-top: 80px;
+}
+.testimonials-dx a {
+  color: white;
+  background-color: #f3b329;
+  padding: 15px;
+  border-radius: 5px;
+}
+.testimonials-dx a:hover {
+  background-color: grey;
+}
+.testimonials-dx-article {
+  margin-top: 70px;
+  background-color: #f3ece3;
+  padding: 20px;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+}
+.testimonials-dx-article p {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.testimonials-dx-article-credits {
+  display: flex;
+  align-items: center;
+}
+#article-author {
+  padding-left: 20px;
+  font-weight: bold;
+}
+.testimonials-dx-article-credits span {
   padding-left: 10px;
 }
