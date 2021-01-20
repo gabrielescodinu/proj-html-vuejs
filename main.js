@@ -26,5 +26,22 @@ let app = new Vue ({
       description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!",
     }
     ],
+    books: [
+      {
+        title: "About Me",
+        description: "Lorem ipsum dolor sit amet.",
+        image: 'img/box-1.jpg',
+      },
+      {
+        title: "My Latest Book",
+        description: "Lorem ipsum dolor sit amet.",
+        image: 'img/box-4.jpg',
+      },
+      {
+        title: "Book Signing",
+        description: "Lorem ipsum dolor sit amet.",
+        image: 'img/box-3.jpg',
+      },
+    ]
   }
 })

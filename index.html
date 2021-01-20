@@ -189,32 +189,13 @@
         <h1>Dig A Little Deeper Into Damon Vaughn</h1>
         <h2>Find more about the author himself</h2>
         <div class="books-list">
-          <a href="#">
-            <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-1.jpg'); background-size: 400px;">
+          <a v-for="book in books" href="#">
+            <div class="book-cover" v-bind:style="{'background-image': 'url(' + book.image + ')'}"
+            style="background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(); background-size: 400px;">
               <div class="book-cover-info">
-                <h3>About Me</h3>
+                <h3>{{book.title}}</h3>
                 <hr></hr>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </a>
-
-          <a href="#">
-            <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-4.jpg'); background-size: 400px;">
-              <div class="book-cover-info">
-                <h3>My Latest Book</h3>
-                <hr></hr>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </a>
-
-          <a href="#">
-            <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-3.jpg'); background-size: 400px;">
-              <div class="book-cover-info">
-                <h3>Book Signing</h3>
-                <hr></hr>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>{{book.description}}</p>
               </div>
             </div>
           </a>
