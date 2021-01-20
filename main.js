@@ -9,6 +9,22 @@ let app = new Vue ({
       "bb-logotan-2x-200x66.png",
       "kindlefire-logotan-2x-200x66.png",
     ],
-    
+    events: [
+      {
+        image: "event-05.jpg",
+        title: "Chicago Book Singing",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!",
+      },
+      {
+        image: "event-04.jpg",
+        title: "Meet & Greet With Amanda",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!",
+      },
+      {
+      image: "event-07.jpg",
+      title: "Open Book Dialogues",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!",
+    }
+    ],
   }
 })
