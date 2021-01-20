@@ -12,6 +12,7 @@
 </head>
 <body>
   <div id="app">
+    <!-- header -->
     <header>
       <!-- navbar -->
       <div class="navbar">
@@ -77,6 +78,7 @@
 
     </header>
 
+    <!-- main -->
     <main>
       <!-- about -->
       <div class="about">
@@ -103,9 +105,7 @@
             <h3>No time to read? No problem. Listen do it</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eligendi numquam iste amet aliquid et.</p>
             <div class="audiobook-info-brands">
-              <img src="img/audible-logo.png" alt="">
-              <img src="img/bn-logo-tall.png" alt="">
-              <img src="img/kindle-logo-tall.png" alt="">
+              <a v-for="audiobook in audiobooks" href="#"><img :src="'img/' + audiobook"></a>
             </div>
           </div>
         </div>
@@ -133,27 +133,18 @@
             </div>
           </a>
         </div>
+
         <div class="testimonials-dx">
           <a href="#">Read All Testimonials</a>
-          <div class="testimonials-dx-article">
-            <h3>A true Masterpiece, Bravo!</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div v-for="testimonial in testimonials" class="testimonials-dx-article">
+            <h3>{{testimonial.title}}</h3>
+            <p>{{testimonial.description}}</p>
             <div class="testimonials-dx-article-credits">
-              <img src="img/theguardian-xsmall.png">
-              <span id="article-author">Gerald Hendley,</span>
-              <span>Gerald Hendley</span>
+              <img :src="'img/' + testimonial.logo">
+              <span id="article-author">{{testimonial.author}},</span>
+              <span>{{testimonial.journal}}</span>
             </div>
           </div>
-          <div class="testimonials-dx-article">
-            <h3>A Unique View On The World!</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div class="testimonials-dx-article-credits">
-              <img src="img/globe-xsmall.png">
-              <span id="article-author">Marey Maxey,</span>
-              <span>The Globe And Mail</span>
-            </div>
-          </div>
-
         </div>
       </div>
 
@@ -222,17 +213,12 @@
           <div class="articles-dx">
             <a id="all-articles" href="#">All Articles</a>
             <div class="articles-dx-cover">
-              <a href="#"><img src="img/thumb-13-2x-320x202.jpg"></a>
-              <div class="articles-cover-info">
-                <h3>What's On Your Booklist?</h3>
-                <p>January 19th 2021</p>
+              <div v-for="article in articles" class="articles-cover-info">
+                <a href="#"><img :src="'img/' + article.image"></a>
+                <h3>{{article.title}}</h3>
+                <p>{{article.date}}</p>
               </div>
 
-              <a href="#"><img src="img/thumb-08-2x-320x202.jpg"></a>
-              <div class="articles-cover-info">
-                <h3>Istanbul Travel Guide</h3>
-                <p>January 19th 2021</p>
-              </div>
             </div>
           </div>
         </div>
@@ -240,11 +226,12 @@
 
     </main>
 
+    <!-- footer -->
     <footer>
       <!-- credits -->
       <div class="credits">
         <div class="logo-credit">
-          <img src="img/author-logo-round-small.png">
+          <a href="#"><img src="img/author-logo-round-small.png"></a>
         </div>
         <div class="about-me">
           <h1>About Me</h1>
@@ -259,20 +246,16 @@
           <p>63 E. Studebaker Street Bolingbrook, IL 60440</p>
           <p>Phone: (800) 000-0000</p>
           <p>Mobile: (800) 000-0000</p>
-          <p>Email: info@your-company.com</p>
+          <p>Email: <a href="#"><span id="email">info@your-company.com</span></a></p>
           <div class="socials">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-linkedin-in"></i>
-            <i class="fab fa-youtube"></i>
+            <a v-for="social in socials" href="#"><i :class="social"></i></a>
           </div>
         </div>
       </div>
 
       <!-- copyright -->
       <div class="copyright">
-        <p><i class="far fa-copyright"></i> Copyright 2012 - 2020 | Avada Theme by <a href="#">Theme Fusion</a> |
+        <p><i class="far fa-copyright"></i> Copyright {{new Date().getFullYear()}} | Avada Theme by <a href="#">Theme Fusion</a> |
           All Rights Reserved | Powere by <a href="#">Gabriele Scodinu</a>
         </p>
 
@@ -281,7 +264,6 @@
     </footer>
 
   </div>
-
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

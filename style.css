@@ -176,6 +176,9 @@ header {
 .brand img {
   padding: 50px;
 }
+.brand img:hover {
+  filter: brightness(50%);
+}
 
 /* audiobook */
 .audiobook-container {
@@ -210,6 +213,9 @@ header {
 }
 .audiobook-info-brands img {
   padding: 20px;
+}
+.audiobook-info-brands img:hover {
+  filter: brightness(50%);
 }
 
 /* testimonials sx */
@@ -497,7 +503,7 @@ header {
   filter: grayscale(100%);
 }
 .articles-dx-cover img {
-  padding: 20px;
+  padding: 20px 20px 20px 0px;
   height: 200px;
 }
 
@@ -533,6 +539,9 @@ footer {
   display: flex;
   flex-direction: column;
 }
+#email {
+  font-weight: bold;
+}
 .socials i {
   padding-right: 20px;
   padding-top: 20px;
@@ -543,5 +552,9 @@ footer {
   color: lightgrey;
 }
 .copyright a {
+  font-weight: bold;
   color: white;
+}
+.copyright a:hover {
+  color: grey;
 }
