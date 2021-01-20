@@ -11,322 +11,316 @@
   <title>Project</title>
 </head>
 <body>
-  <header>
-    <!-- navbar -->
-    <div class="navbar">
-      <div class="logo">
-        <a href="#"><img src="img/author-logo-round-small.png" alt=""></a>
-      </div>
-      <div class="link">
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Testimonials</a>
-        <a href="#">My Blog</a>
-        <a href="#">Meetups</a>
-        <a href="#">Shop</a>
-        <a href="#">Contact Me</a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-      </div>
-    </div>
-
-    <!-- banner -->
-    <div class="banner">
-      <!-- banner sx -->
-      <div class="intro">
-        <h1>Demon Vaughn</h1>
-        <h2>Best Selling Author and the most influential public intellectual in the western
-        world right now.</h2>
-        <h3>- The New York Times</h3>
-        <a href="#"><i class="fas fa-arrow-left"></i></a>
-        <a href="#"><i class="fas fa-arrow-right"></i></a>
+  <div id="app">
+    <header>
+      <!-- navbar -->
+      <div class="navbar">
+        <div class="logo">
+          <a href="#"><img src="img/author-logo-round-small.png" alt=""></a>
+        </div>
+        <div class="link">
+          <a v-for="link in navbarLinks" href="#">{{link}}</a>
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </div>
       </div>
 
-      <!-- banner dx -->
-      <div class="book-release">
-        <div class="icon">
+      <!-- banner -->
+      <div class="banner">
+        <!-- banner sx -->
+        <div class="intro">
+          <h1>Demon Vaughn</h1>
+          <h2>Best Selling Author and the most influential public intellectual in the western
+          world right now.</h2>
+          <h3>- The New York Times</h3>
+          <a href="#"><i class="fas fa-arrow-left"></i></a>
+          <a href="#"><i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <!-- banner dx -->
+        <div class="book-release">
+          <div class="icon">
+            <a href="#">
+              <div class="demos-sale">
+                <i class="fab fa-audible"></i>
+                <p>Demos</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="demos-sale">
+                <span>$</span><span id="price">39</span>
+                <p>On Sale</p>
+              </div>
+            </a>
+          </div>
+          <div class="latest-book">
+            <div class="latest-book-container">
+              <div class="latest-book-image">
+                <img src="img/book-widget.png" alt="">
+              </div>
+              <div class="latest-book-info">
+                <h3>Latest Book Release</h3>
+                <h5>D. VAUGHN AUTOBIOGRAPHY</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+            </div>
+            <div class="buy">
+              <a href="#"><span><i class="fab fa-amazon"></i> Buy On Amazon</span></a>
+              <a href="#"><span><i class="fab fa-apple"></i> Buy On Appstore</span></a>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+
+    <main>
+      <!-- about -->
+      <div class="about">
+        <h1>More About Damon Vaughn</h1>
+        <p>Demon Vaughn is a professor of psychology at the University of Toronto,
+        a clinical psychologist and the author of the multi-milion copy besteller "The story of my life".</p>
+        <a href="#">Meet The Author</a>
+
+      </div>
+
+      <!-- brand -->
+      <div class="brand">
+        <a v-for="brand in brands" href="#"><img :src="'img/' + brand" alt=""></a>
+      </div>
+
+      <!-- audiobook -->
+      <div class="audiobook-container">
+        <div class="audiobook">
+          <div class="audiobook-image">
+            <img src="img/audible-app-2x-400x418.png" alt="">
+          </div>
+          <div class="audiobook-info">
+            <h1>New Audiobook</h1>
+            <h3>No time to read? No problem. Listen do it</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eligendi numquam iste amet aliquid et.</p>
+            <div class="audiobook-info-brands">
+              <img src="img/audible-logo.png" alt="">
+              <img src="img/bn-logo-tall.png" alt="">
+              <img src="img/kindle-logo-tall.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="testimonials">
+        <div class="testimonials-sx">
+          <h1>What The Critics Say</h1>
+          <h2>Testimonials from around the world</h2>
           <a href="#">
-            <div class="demos-sale">
-              <i class="fab fa-audible"></i>
-              <p>Demos</p>
+            <div class="best-author">
+              <h1>Best Author Of His Generation</h1>
+              <hr>
+              <h3>This book will change your perspective on life</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class="best-author-info">
+                <img src="img/nytimes-logo-white-xsmall.png">
+                <span>Justine Kilpatrick,</span>
+                <span id="journal">The New York Times</span>
+
+              </div>
+
             </div>
           </a>
-          <a href="#">
-            <div class="demos-sale">
-              <span>$</span><span id="price">39</span>
-              <p>On Sale</p>
-            </div>
-          </a>
         </div>
-        <div class="latest-book">
-          <div class="latest-book-container">
-            <div class="latest-book-image">
-              <img src="img/book-widget.png" alt="">
+        <div class="testimonials-dx">
+          <a href="#">Read All Testimonials</a>
+          <div class="testimonials-dx-article">
+            <h3>A true Masterpiece, Bravo!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="testimonials-dx-article-credits">
+              <img src="img/theguardian-xsmall.png">
+              <span id="article-author">Gerald Hendley,</span>
+              <span>Gerald Hendley</span>
             </div>
-            <div class="latest-book-info">
-              <h3>Latest Book Release</h3>
-              <h5>D. VAUGHN AUTOBIOGRAPHY</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-
           </div>
-          <div class="buy">
-            <a href="#"><span><i class="fab fa-amazon"></i> Buy On Amazon</span></a>
-            <a href="#"><span><i class="fab fa-apple"></i> Buy On Appstore</span></a>
-
+          <div class="testimonials-dx-article">
+            <h3>A Unique View On The World!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="testimonials-dx-article-credits">
+              <img src="img/globe-xsmall.png">
+              <span id="article-author">Marey Maxey,</span>
+              <span>The Globe And Mail</span>
+            </div>
           </div>
 
         </div>
       </div>
 
-    </div>
-
-  </header>
-
-
-  <main>
-    <!-- about -->
-    <div class="about">
-      <h1>More About Damon Vaughn</h1>
-      <p>Demon Vaughn is a professor of psychology at the University of Toronto,
-      a clinical psychologist and the author of the multi-milion copy besteller "The story of my life".</p>
-      <a href="#">Meet The Author</a>
-
-    </div>
-
-    <!-- brand -->
-    <div class="brand">
-      <a href="#"><img src="img/ebay-logotan-2x-200x66.png" alt=""></a>
-      <a href="#"><img src="img/audible-logotan-2x-200x66.png" alt=""></a>
-      <a href="#"><img src="img/bb-logotan-2x-200x66.png" alt=""></a>
-      <a href="#"><img src="img/kindlefire-logotan-2x-200x66.png" alt=""></a>
-    </div>
-
-    <!-- audiobook -->
-    <div class="audiobook-container">
-      <div class="audiobook">
-        <div class="audiobook-image">
-          <img src="img/audible-app-2x-400x418.png" alt="">
-        </div>
-        <div class="audiobook-info">
-          <h1>New Audiobook</h1>
-          <h3>No time to read? No problem. Listen do it</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eligendi numquam iste amet aliquid et.</p>
-          <div class="audiobook-info-brands">
-            <img src="img/audible-logo.png" alt="">
-            <img src="img/bn-logo-tall.png" alt="">
-            <img src="img/kindle-logo-tall.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Testimonials -->
-    <div class="testimonials">
-      <div class="testimonials-sx">
-        <h1>What The Critics Say</h1>
-        <h2>Testimonials from around the world</h2>
-        <a href="#">
-          <div class="best-author">
-            <h1>Best Author Of His Generation</h1>
+      <!-- upcoming events -->
+      <div class="upcoming-events-container">
+        <h1>Upcoming Events</h1>
+        <h2>Meet The Author In Person</h2>
+        <div class="upcoming-events">
+          <div class="event">
+            <a href="#">
+              <img src="img/event-05.jpg">
+            </a>
+            <h3>Chicago Book Singing</h3>
             <hr>
-            <h3>This book will change your perspective on life</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <div class="best-author-info">
-              <img src="img/nytimes-logo-white-xsmall.png">
-              <span>Justine Kilpatrick,</span>
-              <span id="journal">The New York Times</span>
-
-            </div>
-
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!</p>
           </div>
-        </a>
-      </div>
-      <div class="testimonials-dx">
-        <a href="#">Read All Testimonials</a>
-        <div class="testimonials-dx-article">
-          <h3>A true Masterpiece, Bravo!</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="testimonials-dx-article-credits">
-            <img src="img/theguardian-xsmall.png">
-            <span id="article-author">Gerald Hendley,</span>
-            <span>Gerald Hendley</span>
+          <div class="event">
+            <a href="#">
+              <img src="img/event-04.jpg">
+            </a>
+            <h3>Meet & Greet With Amanda</h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!</p>
+          </div>
+          <div class="event">
+            <a href="#">
+              <img src="img/event-07.jpg">
+            </a>
+            <h3>Open Book Dialogues</h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!</p>
           </div>
         </div>
-        <div class="testimonials-dx-article">
-          <h3>A Unique View On The World!</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="testimonials-dx-article-credits">
-            <img src="img/globe-xsmall.png">
-            <span id="article-author">Marey Maxey,</span>
-            <span>The Globe And Mail</span>
-          </div>
-        </div>
-
       </div>
-    </div>
 
-    <!-- upcoming events -->
-    <div class="upcoming-events-container">
-      <h1>Upcoming Events</h1>
-      <h2>Meet The Author In Person</h2>
-      <div class="upcoming-events">
-        <div class="event">
+      <!-- Newsletter -->
+      <div class="newsletter-container">
+        <div class="newsletter">
+          <h1>Subscribe To My Newsletter</h1>
+          <h2>Be notified about book signing tour dates</h2>
+          <input type="text" placeholder="Insert your email">
+          <a href="#">Subscribe</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+        </div>
+      </div>
+
+      <!-- books -->
+      <div class="books">
+        <h1>Dig A Little Deeper Into Damon Vaughn</h1>
+        <h2>Find more about the author himself</h2>
+        <div class="books-list">
           <a href="#">
-            <img src="img/event-05.jpg">
+            <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-1.jpg'); background-size: 400px;">
+              <div class="book-cover-info">
+                <h3>About Me</h3>
+                <hr></hr>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
           </a>
-          <h3>Chicago Book Singing</h3>
-          <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!</p>
-        </div>
-        <div class="event">
+
           <a href="#">
-            <img src="img/event-04.jpg">
+            <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-4.jpg'); background-size: 400px;">
+              <div class="book-cover-info">
+                <h3>My Latest Book</h3>
+                <hr></hr>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
           </a>
-          <h3>Meet & Greet With Amanda</h3>
-          <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!</p>
-        </div>
-        <div class="event">
+
           <a href="#">
-            <img src="img/event-07.jpg">
+            <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-3.jpg'); background-size: 400px;">
+              <div class="book-cover-info">
+                <h3>Book Signing</h3>
+                <hr></hr>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
           </a>
-          <h3>Open Book Dialogues</h3>
-          <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas repellat mollitia quae reprehenderit ex, dolorem!</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Newsletter -->
-    <div class="newsletter-container">
-      <div class="newsletter">
-        <h1>Subscribe To My Newsletter</h1>
-        <h2>Be notified about book signing tour dates</h2>
-        <input type="text" placeholder="Insert your email">
-        <a href="#">Subscribe</a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-      </div>
-    </div>
-
-    <!-- books -->
-    <div class="books">
-      <h1>Dig A Little Deeper Into Damon Vaughn</h1>
-      <h2>Find more about the author himself</h2>
-      <div class="books-list">
-        <a href="#">
-          <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-1.jpg'); background-size: 400px;">
-            <div class="book-cover-info">
-              <h3>About Me</h3>
-              <hr></hr>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-4.jpg'); background-size: 400px;">
-            <div class="book-cover-info">
-              <h3>My Latest Book</h3>
-              <hr></hr>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-        </a>
-
-        <a href="#">
-          <div class="book-cover" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('img/box-3.jpg'); background-size: 400px;">
-            <div class="book-cover-info">
-              <h3>Book Signing</h3>
-              <hr></hr>
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-
-    <!-- articles -->
-    <div class="articles-container">
-      <div class="articles">
-        <div class="articles-sx">
-          <h1>Recent Articles</h1>
-          <h2>Read the latest entries</h2>
-          <div class="articles-sx-cover">
-            <a href="#"><img src="img/20-Tips-600x353.jpg"></a>
-            <div class="articles-cover-info">
-              <h3>20 Creativity Tips</h3>
-              <p>By Admin | January 19th 2021 | Categories: Event, Tips & Tricks</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, quibusdam?</p>
-            </div>
-          </div>
         </div>
 
-        <div class="articles-dx">
-          <a id="all-articles" href="#">All Articles</a>
-          <div class="articles-dx-cover">
-            <a href="#"><img src="img/thumb-13-2x-320x202.jpg"></a>
-            <div class="articles-cover-info">
-              <h3>What's On Your Booklist?</h3>
-              <p>January 19th 2021</p>
-            </div>
+      </div>
 
-            <a href="#"><img src="img/thumb-08-2x-320x202.jpg"></a>
-            <div class="articles-cover-info">
-              <h3>Istanbul Travel Guide</h3>
-              <p>January 19th 2021</p>
+      <!-- articles -->
+      <div class="articles-container">
+        <div class="articles">
+          <div class="articles-sx">
+            <h1>Recent Articles</h1>
+            <h2>Read the latest entries</h2>
+            <div class="articles-sx-cover">
+              <a href="#"><img src="img/20-Tips-600x353.jpg"></a>
+              <div class="articles-cover-info">
+                <h3>20 Creativity Tips</h3>
+                <p>By Admin | January 19th 2021 | Categories: Event, Tips & Tricks</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, quibusdam?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="articles-dx">
+            <a id="all-articles" href="#">All Articles</a>
+            <div class="articles-dx-cover">
+              <a href="#"><img src="img/thumb-13-2x-320x202.jpg"></a>
+              <div class="articles-cover-info">
+                <h3>What's On Your Booklist?</h3>
+                <p>January 19th 2021</p>
+              </div>
+
+              <a href="#"><img src="img/thumb-08-2x-320x202.jpg"></a>
+              <div class="articles-cover-info">
+                <h3>Istanbul Travel Guide</h3>
+                <p>January 19th 2021</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </main>
+    </main>
 
-  <footer>
-    <!-- credits -->
-    <div class="credits">
-      <div class="logo-credit">
-        <img src="img/author-logo-round-small.png">
-      </div>
-      <div class="about-me">
-        <h1>About Me</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quia reiciendis eum expedita reprehenderit neque ab iure molestiae tempore ut odio, nobis dolor sunt, libero dignissimos fuga quod, quis repudiandae!</p>
-      </div>
-      <div class="useful-links">
-        <h1>Useful Links</h1>
-        <a href="#">> Latest Book</a>
-        <a href="#">> Upcoming Events</a>
-        <a href="#">> Recent Articles</a>
-        <a href="#">> Buisness Enquiries</a>
-        <a href="#">> Visit My Fundation</a>
-      </div>
-      <div class="contact-info">
-        <h1>Contact Info</h1>
-        <p>63 E. Studebaker Street Bolingbrook, IL 60440</p>
-        <p>Phone: (800) 000-0000</p>
-        <p>Mobile: (800) 000-0000</p>
-        <p>Email: info@your-company.com</p>
-        <div class="socials">
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin-in"></i>
-          <i class="fab fa-youtube"></i>
+    <footer>
+      <!-- credits -->
+      <div class="credits">
+        <div class="logo-credit">
+          <img src="img/author-logo-round-small.png">
+        </div>
+        <div class="about-me">
+          <h1>About Me</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quia reiciendis eum expedita reprehenderit neque ab iure molestiae tempore ut odio, nobis dolor sunt, libero dignissimos fuga quod, quis repudiandae!</p>
+        </div>
+        <div class="useful-links">
+          <h1>Useful Links</h1>
+          <a v-for="link in creditLinks" href="#">> {{link}}</a>
+        </div>
+        <div class="contact-info">
+          <h1>Contact Info</h1>
+          <p>63 E. Studebaker Street Bolingbrook, IL 60440</p>
+          <p>Phone: (800) 000-0000</p>
+          <p>Mobile: (800) 000-0000</p>
+          <p>Email: info@your-company.com</p>
+          <div class="socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- copyright -->
-    <div class="copyright">
-      <p><i class="far fa-copyright"></i> Copyright 2012 - 2020 | Avada Theme by <a href="#">Theme Fusion</a> |
-        All Rights Reserved | Powere by <a href="#">Gabriele Scodinu</a>
-      </p>
+      <!-- copyright -->
+      <div class="copyright">
+        <p><i class="far fa-copyright"></i> Copyright 2012 - 2020 | Avada Theme by <a href="#">Theme Fusion</a> |
+          All Rights Reserved | Powere by <a href="#">Gabriele Scodinu</a>
+        </p>
 
-    </div>
+      </div>
 
-  </footer>
+    </footer>
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>
